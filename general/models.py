@@ -1,14 +1,19 @@
+# app/general/models.py
 from pydantic import BaseModel
+from typing import Optional, Dict
 
 class EndpointCreateRequest(BaseModel):
-    """
-    Pydantic model for receiving data to create a new endpoint.
-    """
-    path: str  # The path of the endpoint (e.g., "/hello")
-    response_message: str  # The message the endpoint should return (e.g., "Hello, World!")
+    path: str
+    method: str  # e.g., GET, POST, PUT, DELETE
+    response_message: str
+    schema: Optional[Dict] = None  # For custom data structures
 
 class EndpointResponse(BaseModel):
-    """
-    Pydantic model for defining the response structure of dynamic endpoints.
-    """
-    message: str  # The response message from the endpoint
+    id: int
+    path: str
+    method: str
+    response_message: str
+    schema: Optional[Dict] = None
+
+class EndpointDeleteRequest(BaseModel):
+    path: str
