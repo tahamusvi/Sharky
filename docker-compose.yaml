@@ -10,6 +10,8 @@ services:
       - "8000"
     environment:
       - SECRET_KEY=sdkjlfsjdflskjdlfsdjflsdflskdf
+      - deploy=True
+      - DEBUG=Ture
       - DATABASE_URL=postgres://user:password@db:5432/my_database
     depends_on:
       - db

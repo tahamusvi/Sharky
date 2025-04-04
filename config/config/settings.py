@@ -42,7 +42,7 @@ else:
     }
 
 
-ALLOWED_HOSTS = ['192.168.6.195', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
