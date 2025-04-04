@@ -42,7 +42,7 @@ else:
     }
 
 
-ALLOWED_HOSTS = ['tdocker.liara.run', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['tdocker.liara.run', 'localhost', '192.168.6.195']
 
 
 # Application definition
