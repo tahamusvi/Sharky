@@ -1,6 +1,11 @@
 FROM python:3.11
+
 WORKDIR /app
+
 COPY . .
+
+WORKDIR /app/config
+
 RUN pip install -r requirements.txt
 
 RUN mkdir -p /usr/src/app/staticfiles \
