@@ -11,7 +11,7 @@ services:
     environment:
       - SECRET_KEY=sdkjlfsjdflskjdlfsdjflsdflskdf
       - deploy=True
-      - DEBUG=Ture
+      - DEBUG=True
       - DATABASE_URL=postgres://user:password@db:5432/my_database
     depends_on:
       - db

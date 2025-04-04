@@ -1,12 +1,8 @@
 FROM python:3.11
-
-ADD . /usr/src/app
-
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+RUN python manage.py collectstatic --noinput
 
 RUN mkdir -p /usr/src/app/staticfiles \
   && python manage.py collectstatic
