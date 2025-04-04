@@ -8,6 +8,9 @@ services:
       - .:/app
     expose:
       - "8000"
+    environment:
+      - SECRET_KEY: sdkjlfsjdflskjdlfsdjflsdflskdf
+      - DATABASE_URL: postgres://user:password@db:5432/my_database
     depends_on:
       - db
 
