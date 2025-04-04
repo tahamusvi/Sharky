@@ -1,12 +1,8 @@
 FROM python:3.11
 
 WORKDIR /app
-RUN ls 
 
 COPY . .
-
-WORKDIR /app/config
-RUN ls 
 
 RUN pip install -r requirements.txt
 
